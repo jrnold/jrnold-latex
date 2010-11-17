@@ -1,0 +1,84 @@
+% package jrnold
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{jrnold}[2007/11/25 The mythical jrnold package]
+
+% packages required
+\RequirePackage{amsmath}
+\RequirePackage{amssymb}
+\RequirePackage{amsthm}
+\RequirePackage{amsfonts}
+\RequirePackage{mathtools}
+
+%common sets and fields
+\usepackage{amsfonts}% to get the \mathbb alphabet
+\newcommand{\field}[1]{\ensuremath{\mathbb{#1}}}
+\newcommand{\R}{\field{R}}
+\newcommand{\Rm}{\field{R}_{-}}
+\newcommand{\Rmm}{\field{R}_{--}}
+\newcommand{\Rp}{\field{R}_{+}}
+\newcommand{\Rpp}{\field{R}_{++}}
+\newcommand{\Q}{\field{Q}}
+\newcommand{\I}{\field{I}}
+\newcommand{\Z}{\field{Z}}
+\newcommand{\N}{\field{N}}
+\newcommand{\C}{\field{C}}
+\newcommand{\F}{\field{F}}
+
+%change to and from arrow for Logic
+\newcommand{\lto}{\Rightarrow}
+\newcommand{\lgets}{\Leftarrow}
+
+% function/mapping
+\newcommand{\func}[3]{\ensuremath{#1 : #2 \rightarrow #3 }}
+\newcommand{\mfunc}[3]{\ensuremath{#1:#2 \twoheadrightarrow #3}}
+
+% set builder notation
+%% \newcommand{\set}[2]{\ensuremath{\left\{ #1 : #2\right\}}}
+\newcommand{\set}[2]{\ensuremath{\left\{ #1 | #2\right\}}}
+
+% Open Ball 
+\newcommand{\ball}[2]{\ensuremath{B_{#2}\left( #1 \right)}}
+
+% Vector notation
+\newcommand{\vect}[1]{\boldsymbol{ #1 }}
+
+% Matched braces
+% \providecommand{\abs}[1]{\ensuremath{\left\vert #1 \right\vert}}
+% \providecommand{\norm}[1]{\ensuremath{\left\Vert #1 \right\Vert}}
+% \providecommand{\innerp}[1]{\ensuremath{\left\langle #1 \right\rangle}}      % inner product
+% \providecommand{\ceil}[1]{\ensuremath{\left\lceil #1 \right\rceil}}
+% \providecommand{\floor}[1]{\ensuremath{\left\lfloor #1 \right\rfloor}}
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}
+\DeclarePairedDelimiter\norm{\lVert}{\rVert}
+\DeclarePairedDelimiter\innerp{\langle}{\rangle}
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+
+% Math Operators 
+\DeclareMathOperator{\bd}{bd}       % boundary
+\DeclareMathOperator{\conv}{conv}   % convex hull
+\DeclareMathOperator{\clos}{clos}   % closure
+
+% 404 stuff
+\DeclareMathOperator{\E}{E}     % variance
+\DeclareMathOperator{\Var}{Var}     % variance
+\DeclareMathOperator{\Cov}{Cov}     % covariance
+
+%% Foo
+\DeclareMathOperator*{\argmax}{argmax}
+\DeclareMathOperator*{\argmin}{argmin}
+
+% Other commands for sets
+\providecommand{\comp}[1]{\ensuremath{\overline{ #1 }}}
+\providecommand{\closure}[1]{\ensuremath{\clos #1}}
+\providecommand{\interior}[1]{\ensuremath{\int #1}}
+
+%% Abbreviations
+%\def\JBA{J\kern-.1667em\lower.5ex\hbox{B}\kern-.125emA\spacefactor1000}%
+%\def\JBA{J\kern-.1em\lower.5ex\hbox{B}\kern-.125emA\spacefactor1000}%
+\def\JbA{J\kern-.1em\lower.5ex\hbox{B}\kern-.125em\raise.333ex\hbox{A}\spacefactor1000}%
+\def\JBA{$\cal J$\kern-.4em\lower.33ex\hbox{$\beta$}\kern-.1em\raise.5ex\hbox{$\cal A$}\spacefactor1000}%
+
+%% Typeset R and S
+\newcommand{\RR}{\textsf{R}}
+\newcommand{\SLang}{\textsf{S} language}
