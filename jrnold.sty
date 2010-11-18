@@ -41,7 +41,7 @@
 % Vector notation
 \newcommand{\vect}[1]{\boldsymbol{ #1 }}
 
-% Matched braces
+% Matched bracesx
 \DeclarePairedDelimiter\abs{\lvert}{\rvert}
 \DeclarePairedDelimiter\norm{\lVert}{\rVert}
 \DeclarePairedDelimiter\innerp{\langle}{\rangle}
@@ -59,6 +59,21 @@
 \DeclareMathOperator{\Cov}{Cov}     % covariance
 \DeclareMathOperator*{\argmax}{argmax}
 \DeclareMathOperator*{\argmin}{argmin}
+\DeclareMathOperator{\Inv}{Inv-}
+\DeclareMathOperator{\U}{U}
+\DeclareMathOperator{\Normal}{N}
+\DeclareMathOperator{\pGamma}{Gamma}
+\newcommand{\iGamma}{\Inv{}\pGamma{}}
+\DeclareMathOperator{\Expon}{Expon}
+\DeclareMathOperator{\Wishart}{Wishart}
+\newcommand{\iWishart}{\Inv{}\Wishart{}}
+\DeclareMathOperator{\Dirichlet}{Dirichlet}
+\DeclareMathOperator{\pBeta}{Beta}
+\DeclareMathOperator{\Poisson}{Poisson}
+\DeclareMathOperator{\Bin}{Bin}
+\DeclareMathOperator{\Multin}{Multin}
+\DeclareMathOperator{\NegBin}{Neg-bin}
+\DeclareMathOperator{\BetaBin}{Beta-bin}
 
 % Other commands for sets
 \providecommand{\comp}[1]{\ensuremath{\overline{ #1 }}}
