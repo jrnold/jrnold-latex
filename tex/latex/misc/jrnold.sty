@@ -1,6 +1,6 @@
 % package jrnold
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesPackage{jrnold}[2007/11/25 The mythical jrnold package]
+\ProvidesPackage{jrnold}[2010/11/17 The mythical jrnold package]
 
 % packages required
 \RequirePackage{amsmath}
@@ -33,7 +33,6 @@
 \newcommand{\mfunc}[3]{\ensuremath{#1:#2 \twoheadrightarrow #3}}
 
 % set builder notation
-%% \newcommand{\set}[2]{\ensuremath{\left\{ #1 : #2\right\}}}
 \newcommand{\set}[2]{\ensuremath{\left\{ #1 | #2\right\}}}
 
 % Open Ball 
@@ -43,11 +42,6 @@
 \newcommand{\vect}[1]{\boldsymbol{ #1 }}
 
 % Matched braces
-% \providecommand{\abs}[1]{\ensuremath{\left\vert #1 \right\vert}}
-% \providecommand{\norm}[1]{\ensuremath{\left\Vert #1 \right\Vert}}
-% \providecommand{\innerp}[1]{\ensuremath{\left\langle #1 \right\rangle}}      % inner product
-% \providecommand{\ceil}[1]{\ensuremath{\left\lceil #1 \right\rceil}}
-% \providecommand{\floor}[1]{\ensuremath{\left\lfloor #1 \right\rfloor}}
 \DeclarePairedDelimiter\abs{\lvert}{\rvert}
 \DeclarePairedDelimiter\norm{\lVert}{\rVert}
 \DeclarePairedDelimiter\innerp{\langle}{\rangle}
@@ -55,16 +49,14 @@
 \DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
 
 % Math Operators 
+% Real Analysis
 \DeclareMathOperator{\bd}{bd}       % boundary
 \DeclareMathOperator{\conv}{conv}   % convex hull
 \DeclareMathOperator{\clos}{clos}   % closure
-
-% 404 stuff
+% Statistical 
 \DeclareMathOperator{\E}{E}     % variance
 \DeclareMathOperator{\Var}{Var}     % variance
 \DeclareMathOperator{\Cov}{Cov}     % covariance
-
-%% Foo
 \DeclareMathOperator*{\argmax}{argmax}
 \DeclareMathOperator*{\argmin}{argmin}
 
