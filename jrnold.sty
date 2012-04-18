@@ -30,13 +30,7 @@
 
 % function/mapping
 \newcommand{\func}[3]{\ensuremath{#1 : #2 \rightarrow #3 }}
-\newcommand{\mfunc}[3]{\ensuremath{#1:#2 \twoheadrightarrow #3}}
-
-% set builder notation
-\newcommand{\set}[2]{\ensuremath{\left\{ #1 | #2\right\}}}
-
-% Open Ball 
-\newcommand{\ball}[2]{\ensuremath{B_{#2}\left( #1 \right)}}
+\newcommand{\mfunc}[3]{\ensuremath{#1 : #2 \twoheadrightarrow #3}}
 
 % Vector notation
 \newcommand{\vect}[1]{\boldsymbol{ #1 }}
@@ -47,6 +41,8 @@
 \DeclarePairedDelimiter\innerp{\langle}{\rangle}
 \DeclarePairedDelimiter\ceil{\lceil}{\rceil}
 \DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+% http://tex.stackexchange.com/questions/13634/define-pretty-sets-in-latex-esp-how-to-do-the-condition-separator
+\DeclarePairedDelimiterX\Set[2]{\lbrace}{\rbrace}{ #1 \,\delimsize|\, #2 }
 
 % Math Operators 
 % Real Analysis
@@ -83,7 +79,6 @@
 \providecommand{\closure}[1]{\ensuremath{\clos #1}}
 \providecommand{\interior}[1]{\ensuremath{\int #1}}
 
-
 %% Abbreviations
 %\def\JBA{J\kern-.1667em\lower.5ex\hbox{B}\kern-.125emA\spacefactor1000}%
 %\def\JBA{J\kern-.1em\lower.5ex\hbox{B}\kern-.125emA\spacefactor1000}%
@@ -91,5 +86,5 @@
 \def\JBA{$\cal J$\kern-.4em\lower.33ex\hbox{$\beta$}\kern-.1em\raise.5ex\hbox{$\cal A$}\spacefactor1000}%
 
 %% Typeset R and S
-\newcommand{\RR}{\textsf{R}}
+\newcommand{\RLang}{\textsf{R}}
 \newcommand{\SLang}{\textsf{S} language}
